@@ -265,8 +265,15 @@ footer {
 
 /* 10. Responsividade */
 .hamburger { display: none; cursor: pointer; flex-direction: column; gap: 6px; }
-.hamburger span { width: 30px; height: 3px; background: var(--primary); border-radius: 2px; }
-
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background: white; /* deixa visível no fundo escuro */
+    border-radius: 2px;
+}
+.hamburger {
+    padding: 8px;
+}
 @media (max-width: 992px) {
     .hamburger { display: flex; }
     .nav-links {
@@ -581,5 +588,24 @@ footer {
     }
   .group-title {
         font-size: 1.3rem;
+    }
+}
+@media (max-width: 992px) {
+
+    .nav-links {
+        background: white !important;  /* garante fundo branco */
+    }
+
+    .nav-links a {
+        color: #1A2B3C !important; /* força texto escuro */
+        font-size: 1.1rem;
+    }
+
+    .nav-links a::after {
+        background-color: #FF6B00;
+    }
+
+    .cta-nav {
+        color: white !important; /* mantém botão laranja */
     }
 }
